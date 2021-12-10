@@ -2,6 +2,9 @@
 
 namespace Postal;
 
+use GuzzleHttp\RequestOptions;
+use GuzzleHttp\Client as GuzzleClient;
+
 class Client
 {
     public function __construct($host, $serverKey)
@@ -21,13 +24,15 @@ class Client
         ];
 
         // Make the body
-        $json = json_encode($parameters);
+        $client = new GuzzleClient();
 
-        // Make the request
-        $response = \Requests::post($url, $headers, $json);
+        $response = $client->post($url, [
+            'headers' => $headers,
+            RequestOptions::JSON => $parameters // or 'json' => [...]
+        ]);
 
-        if ($response->status_code === 200) {
-            $json = json_decode($response->body);
+        if ($response->getStatusCode() === 200) {
+            $json = json_decode($response->getBody()->getContents());
 
             if ($json->status == 'success') {
                 return $json->data;
