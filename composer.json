@@ -4,7 +4,6 @@
     "keywords": ["postal", "mail"],
     "license": "MIT",
     "homepage":"https://github.com/atech/postal",
-    "version": "v1.3",
     "authors": [
         {
             "name": "Adam Cooke",
