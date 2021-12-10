@@ -1,5 +1,5 @@
 {
-    "name": "postal/postal",
+    "name": "lucascosta/postal",
     "description": "Postal for PHP library.",
     "keywords": ["postal", "mail"],
     "license": "MIT",
@@ -8,12 +8,15 @@
         {
             "name": "Adam Cooke",
             "email": "me@adamcooke.io"
+        },
+        {
+            "name": "Lucas Costa",
+            "email": "lucascostacruzsilva@gmail.com"
         }
     ],
     "type": "library",
     "require": {
-		"php": ">=5.4",
-        "rmccue/requests": ">=1.0",
+		"php": ">=7.0",
         "guzzlehttp/guzzle": "^7.4"
     },
 	"autoload": {
