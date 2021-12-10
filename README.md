@@ -7,7 +7,7 @@ This library helps you send e-mails through [Postal](https://github.com/atech/po
 Install the library using [Composer](https://getcomposer.org/):
 
 ```
-$ composer require postal/postal
+$ composer require lucascosta/postal
 ```
 
 ## Usage
